@@ -1,0 +1,12 @@
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\bin\Debug\net5.0-windows\DTO.deps.json
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\bin\Debug\net5.0-windows\DTO.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\bin\Debug\net5.0-windows\ref\DTO.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\bin\Debug\net5.0-windows\DTO.pdb
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\DTO.csproj.AssemblyReference.cache
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\DTO.AssemblyInfoInputs.cache
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\DTO.AssemblyInfo.cs
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\DTO.csproj.CoreCompileInputs.cache
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\DTO.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\ref\DTO.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\DTO\obj\Debug\net5.0-windows\DTO.pdb

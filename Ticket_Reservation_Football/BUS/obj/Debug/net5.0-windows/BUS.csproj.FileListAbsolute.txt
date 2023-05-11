@@ -1,0 +1,17 @@
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\BUS.deps.json
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\BUS.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\ref\BUS.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\BUS.pdb
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\DAL.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\DTO.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\DAL.pdb
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\bin\Debug\net5.0-windows\DTO.pdb
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.csproj.AssemblyReference.cache
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.GeneratedMSBuildEditorConfig.editorconfig
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.AssemblyInfoInputs.cache
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.AssemblyInfo.cs
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.csproj.CoreCompileInputs.cache
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.csproj.CopyComplete
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\ref\BUS.dll
+E:\BTL_MônHoc\Đồ án\Ticket_Reservation_Football\Ticket_Reservation_Football\BUS\obj\Debug\net5.0-windows\BUS.pdb

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UEFA_Ticket" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HOAPRO\SQLEXPRESS;Initial Catalog=UEFA_Ticket;Integrated Security=True" SettingsObjectName="Ticket_Reservation_Football.Properties.Settings" SettingsPropertyName="UEFA_TicketConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Payment" Member="Payments">
+    <Type Name="Payment">
+      <Column Name="PaymentID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PayMethod" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="Payment_Customer" Member="Customers" ThisKey="PaymentID" OtherKey="PaymentID" Type="Customer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResultSoccer" Member="ResultSoccers">
+    <Type Name="ResultSoccer">
+      <Column Name="STT" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoccerID" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="SoccerMatch_ResultSoccer" Member="SoccerMatch" ThisKey="SoccerID" OtherKey="SoccerID" Type="SoccerMatch" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResultSoccerTotal" Member="ResultSoccerTotals">
+    <Type Name="ResultSoccerTotal">
+      <Column Name="TotalID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoccerID" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NameRound" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TotalResult" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="ResultSoccerTotal_Winner" Member="Winners" ThisKey="TotalID" OtherKey="TotalID" Type="Winner" />
+      <Association Name="SoccerMatch_ResultSoccerTotal" Member="SoccerMatch" ThisKey="SoccerID" OtherKey="SoccerID" Type="SoccerMatch" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SoccerMatch" Member="SoccerMatches">
+    <Type Name="SoccerMatch">
+      <Column Name="SoccerID" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoccerName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Showtime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Day" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NameRoundID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameReferee" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Column Name="NameStadium" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalTicket" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SoccerMatch_ResultSoccer" Member="ResultSoccers" ThisKey="SoccerID" OtherKey="SoccerID" Type="ResultSoccer" />
+      <Association Name="SoccerMatch_ResultSoccerTotal" Member="ResultSoccerTotals" ThisKey="SoccerID" OtherKey="SoccerID" Type="ResultSoccerTotal" />
+      <Association Name="SoccerMatch_Ticket" Member="Tickets" ThisKey="SoccerID" OtherKey="SoccerID" Type="Ticket" />
+      <Association Name="NameRoundd_SoccerMatch" Member="NameRoundd" ThisKey="NameRoundID" OtherKey="NameRoundID" Type="NameRoundd" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Winner" Member="Winners">
+    <Type Name="Winner">
+      <Column Name="WinnerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoccerName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NameCoach" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TotalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ResultSoccerTotal_Winner" Member="ResultSoccerTotal" ThisKey="TotalID" OtherKey="TotalID" Type="ResultSoccerTotal" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NameRoundd" Member="NameRoundds">
+    <Type Name="NameRoundd">
+      <Column Name="NameRoundID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NameRound" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NameRoundd_SoccerMatch" Member="SoccerMatches" ThisKey="NameRoundID" OtherKey="NameRoundID" Type="SoccerMatch" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tickets" Member="Tickets">
+    <Type Name="Ticket">
+      <Column Name="TicketID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameRoundID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoccerID" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SoccerMatch_Ticket" Member="SoccerMatch" ThisKey="SoccerID" OtherKey="SoccerID" Type="SoccerMatch" IsForeignKey="true" />
+      <Association Name="Customer_Ticket" Member="Customer" ThisKey="CustomerID" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Login" Member="Logins">
+    <Type Name="Login">
+      <Column Name="TenTaiKhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Login_Customer" Member="Customers" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="Customer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Names" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TelephoneCustomer" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PaymentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenTaiKhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Ticket" Member="Tickets" ThisKey="CustomerID" OtherKey="CustomerID" Type="Ticket" />
+      <Association Name="Payment_Customer" Member="Payment" ThisKey="PaymentID" OtherKey="PaymentID" Type="Payment" IsForeignKey="true" />
+      <Association Name="Login_Customer" Member="Login" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="Login" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
